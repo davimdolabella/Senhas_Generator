@@ -1,22 +1,140 @@
-*{
+/* Reset básico e box-sizing para todos os elementos */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html{
+/* Define altura total para html e body */
+body, html {
     height: 100%;
 }
 
-.config_button{
-    width: 2rem;
-    height: 2rem;
-    background-image: url("../img/config.png");
-    background-size: cover;
+/* Estilo principal para a seção do gerador */
+.gerador {
+    width: 30rem;
+    margin: 0 auto;
+    padding: 2%;
+    background-color: #e7e4e4;
+    border: 3px solid rgb(151, 2, 2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(107, 106, 106);
 }
 
-.display #senha{
-    width: 20rem;
-    height: 2.5rem;
-    border: 0.15rem solid black;
+/* Estilo para o título principal dentro da seção do gerador */
+.gerador > h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilo para a área de exibição da senha */
+.display {
+    margin: 50px 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 2px solid rgb(151, 2, 2);
+    border-radius: 10px;
+    padding: 0 10px;
+    font-family: sans-serif;
+}
+
+/* Estilo para o campo de senha */
+#senha {
+    width: 100%;
+    height: 35px;
+    background-color: white;
+    font-size: 1.3rem;
+    padding-top: 0.4rem;
+    overflow-x: auto;
+    cursor: default;
+}
+
+/* Customização da barra de rolagem horizontal */
+#senha::-webkit-scrollbar {
+    height: 3px;
+    background-color: gray;
+}
+
+#senha::-webkit-scrollbar-thumb {
+    height: 10px;
+    background-color: rgb(163, 7, 7);
+}
+
+/* Estilo para os botões de copiar e gerar senha */
+#copiar, #gerar_button {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 8px;
+    cursor: pointer;
+}
+
+#copiar {
+    background-image: url("../img/copiar.png");
+}
+
+#gerar_button {
+    background-image: url('../img/gerar.png');
+    width: 24px;
+}
+
+/* Estilo para o título secundário */
+h2.dois {
+    font-size: 1.7rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilo para o container de configuração */
+.config_container {
+    background-color: white;
+    padding: 1rem;
+    border: 2px solid rgb(151, 2, 2);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 15rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Remove transição padrão do elemento abbr */
+abbr {
+    transition: 0;
+}
+
+/* Estilo para cada item dentro do container de configuração */
+.config_container .single {
+    width: 100%;
+    display: flex;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    margin: 10px 0;
+}
+
+/* Estilo para elementos select */
+select {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #797979;
+}
+
+/* Estilo específico para elementos span dentro de .select */
+.select span {
+    margin-right: 1rem;
+}
+
+/* Estilo para checkboxes dentro de .single */
+.single input[type=checkbox] {
+    margin-right: 1rem;
+    width: 2rem;
 }

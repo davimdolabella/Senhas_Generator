@@ -5,29 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Gerador de senhas</title>
+    <title>Gerador de Senhas</title>
 </head>
 <body>
     <section class="gerador">
+        <h2>Gerador de Senha</h2>
 
-        <div class="gerar_container">
-            <input id="gerar_button" type="submit" value="Gerar Senha">
-            <div class="config_button"></div>
-        </div><!--gerar-->
+        <div class="display">
+            <div id="senha"></div>
+            <!-- botao copiar a senha -->
+            <abbr title="Copiar" class="legenda">
+                <div id="copiar"></div>
+            </abbr>
+            <!-- botao para gerar a senha -->
+            <abbr title="Gerar Senha" class="legenda">
+                <div id="gerar_button"></div>
+            </abbr>
+        </div><!--display-->
+
+        <h2 class="dois">*Personalize a Senha</h2>
 
         <div class="config_container">
-            <div class="single">
-                <span>Tamanho</span><select id="tamanho"></select>
+            <!-- Seletor de tamanho -->
+            <div class="single select">
+                <span>Tamanho</span>
+                <select id="tamanho"></select>
             </div><!--single-->
-            <div class="single">
+
+            <!-- Seletor de maiúsculas/minúsculas -->
+            <div class="single select">
                 <select name="mmm" id="mmm">
                     <option value="mai">Maiúsculas</option>
-                    <option value="min">Minúsculas</option>
                     <option value="misto">Misto</option>
+                    <option value="min">Minúsculas</option>
                 </select>
             </div><!--single-->
+            
+            <!-- Opções de caracteres -->
             <div class="single">
-                <input type="checkbox" id="letras"><span>Letras (ABC)</span>
+                <input type="checkbox" id="letras" checked><span>Letras (ABC)</span>
             </div><!--single-->
             <div class="single">
                 <input type="checkbox" id="numeros"><span>Números (123)</span>
@@ -36,11 +52,8 @@
                 <input type="checkbox" id="simbolos"><span>Símbolos (@#$)</span>
             </div><!--single-->
         </div><!--config container-->
-
-        <div class="display">
-            <div id="senha"></div><!--senha-->
-        </div><!--display-->
     </section><!--gerador-->
+
     <script src="js/script.js"></script>
 </body>
 </html>
