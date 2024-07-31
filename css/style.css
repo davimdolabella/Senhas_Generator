@@ -12,7 +12,8 @@ body, html {
 
 /* Estilo principal para a seção do gerador */
 .gerador {
-    width: 30rem;
+    max-width: 30rem;
+    width: 80%;
     margin: 0 auto;
     padding: 2%;
     background-color: #e7e4e4;
@@ -100,7 +101,8 @@ h2.dois {
     border: 2px solid rgb(151, 2, 2);
     border-radius: 10px;
     margin: 20px auto;
-    width: 15rem;
+    max-width: 15rem;
+    width: 70%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -130,11 +132,29 @@ select {
 
 /* Estilo específico para elementos span dentro de .select */
 .select span {
-    margin-right: 1rem;
+    margin-right: 5%;
 }
 
 /* Estilo para checkboxes dentro de .single */
 .single input[type=checkbox] {
     margin-right: 1rem;
     width: 2rem;
+}
+
+@media screen and (max-width: 580px) {
+    .gerador > h2{
+        font-size: 1.3rem;
+    }
+    .config_container .single{
+        font-size: 1rem;
+    }
+    select {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #797979;
+    }
+    .single input[type=checkbox] {
+        margin-right: 1rem;
+        width: 1rem;
+    }
 }
