@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gerador de senhas</title>
+</head>
+<body>
+    <section class="gerador">
+
+        <div class="gerar_container">
+            <input id="gerar_button" type="submit" value="Gerar Senha">
+            <div class="config_button"></div>
+        </div><!--gerar-->
+
+        <div class="config_container">
+            <div class="single">
+                <span>Tamanho</span><select id="tamanho"></select>
+            </div><!--single-->
+            <div class="single">
+                <select name="mmm" id="mmm">
+                    <option value="mai">Maiúsculas</option>
+                    <option value="min">Minúsculas</option>
+                    <option value="misto">Misto</option>
+                </select>
+            </div><!--single-->
+            <div class="single">
+                <input type="checkbox" id="letras"><span>Letras (ABC)</span>
+            </div><!--single-->
+            <div class="single">
+                <input type="checkbox" id="numeros"><span>Números (123)</span>
+            </div><!--single-->
+            <div class="single">
+                <input type="checkbox" id="simbolos"><span>Símbolos (@#$)</span>
+            </div><!--single-->
+        </div><!--config container-->
+
+        <div class="display">
+            <div id="senha"></div><!--senha-->
+        </div><!--display-->
+    </section><!--gerador-->
+    <script src="js/script.js"></script>
+</body>
+</html>

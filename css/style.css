@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+}
+
+.config_button{
+    width: 2rem;
+    height: 2rem;
+    background-image: url("../img/config.png");
+    background-size: cover;
+}
+
+.display #senha{
+    width: 20rem;
+    height: 2.5rem;
+    border: 0.15rem solid black;
+}
